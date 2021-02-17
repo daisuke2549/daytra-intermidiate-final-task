@@ -1,0 +1,466 @@
+@charset "utf-8";
+
+/*=====================================================
+#mixin
+=====================================================*/
+$breakpoints:(
+
+   'sm':'screen and (max-width: 767px)',
+   'md':'screen and (min-width: 768px)',
+) !default;
+
+@mixin mq($breakpoint: md){
+    @media #{map-get($breakpoints, $breakpoint)}{
+        //この中をカスタムできる
+        @content;
+    }
+}
+
+/*=====================================================
+#colors
+=====================================================*/
+$primary-color:#FFFFFF;
+$font-color1:#3E3E3E;
+$font-color2:#FFFFFF;
+$background:#F3F3F3;
+
+
+/*=====================================================
+# common - 全体に共通するスタイル
+=====================================================*/
+body{
+    font-size: 16px;
+    color:$font-color1;
+    font-family: 'Montserrat', "游ゴシック", sans-serif;
+    line-height: 1.2142;
+    text-align:center;
+    background-color:$background;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+.inner {
+    max-width:1220px;
+    margin:0 auto;
+    padding:0 40px;
+    box-sizing: content-box;
+    @include mq(sm){
+        padding:0 15px;
+    }
+}
+
+a{
+    color:$font-color1;
+    background-color: transparent;
+}
+.inner-section-title{
+    h1{
+        padding-top: 60px;
+    }
+}
+
+
+h1{
+   font-size:36px;
+   font-weight: bold;
+}
+
+h2{
+  font-size:32px;
+}
+h3{
+    font-size:20px;
+}
+
+
+/*=====================================================
+#ヘッダー
+=====================================================*/
+header{
+
+}
+
+
+.header-navigation nav ul{
+    display: flex;
+    justify-content: center;
+
+    li{
+     padding: 32px 20px;
+    }
+}
+
+.header-top-part{
+    height:565px;
+
+    background: url(../img/mv.png) top right 100% no-repeat;
+    background-size:  cover;
+}
+.header-top-title{
+    padding-top:153px;
+    h1{
+      padding-top: 153px;
+      text-align:left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p{
+        margin-top: 40px;
+        text-align:left;
+        margin-top:40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button{
+        font-size:18px;
+        font-weight: bold;
+        background-color:#FFAA3B ;
+        box-shadow: 0px 3px 5px #3E3E3E33;
+        border-radius: 4px;
+        width:282px;
+        margin-top: 32px;
+        height:50px;
+    }
+    button a{
+        color:$font-color2;
+
+    }
+}
+
+/*=====================================================
+#ニュース
+=====================================================*/
+.news{
+}
+
+.news-inner-section{
+    margin: 120px 0;
+    max-width: 1200px;
+    height: 659px;
+    background-color: #fff;
+
+}
+.news-text-area-content{
+   margin-top: 60px;
+}
+
+.news-section-text-area{
+    margin: 0 20px;
+    border-top: 1px solid ;
+    margin-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    vertical-align: center;
+
+    p{
+        text-align: left;
+        padding: 40px;
+        padding-left:0px;
+    }
+    img{
+        width: 43px;
+        height: 46px;
+    }
+}
+
+.news-section-text-area:nth-child(3){
+    border-bottom: 1px solid ;
+}
+
+
+.news-text-area-date{
+    margin-top: 7px;
+}
+.news-text-area-date-button{
+    font-size:14px;
+
+    width:121px;
+    height:30px;
+    border: 2px solid #3B69FF;
+    border-radius: 50px;
+    background-color: #fff;
+
+    a{
+
+    }
+
+}
+.news-text-area{
+    font-size:18px;
+}
+
+.news-more-button{
+    margin-top:50px;
+  a{
+    border:1px solid;
+    letter-spacing: 4px;
+    padding:10px 50px;
+    background-color: #fff;
+   }
+}
+
+
+/*=====================================================
+#サービス
+=====================================================*/
+.service{
+    background-color:#3E3E3E;
+    height: 400px;
+}
+.service-inner-section{
+    h1{
+       color:#FFFFFF;
+    }
+}
+
+.service-content-items{
+    display: flex;
+    max-width:960px;
+    background-color: #fff;
+    margin:60px auto 0;
+}
+.service-content-item{
+    max-width: 230px;
+    margin: 60px auto 60px;
+    img{
+        width: 64px;
+        height: 64px;
+    }
+    h3{
+        font-size:20px;
+        font-weight: bold;
+        padding-top: 8px;
+    }
+    p{
+        padding-top: 20px;
+    }
+}
+
+
+/*=====================================================
+#Result
+=====================================================*/
+.result{
+    margin-top: 215px;
+}
+
+.result-inner-section{
+    max-width:1240px;
+    background-color:#3E3E3E;
+    height: 754px;
+    margin-bottom: 60px;
+
+    h1{
+      color:#fff;
+      text-align: left;
+      margin-left: 60px;
+    }
+}
+
+.result-content-items{
+    margin-top: 60px;
+    display: flex;
+}
+.result-content-item{
+    background-color: #fff;
+    margin:0 20px;
+    text-align: left;
+
+    h3{
+      padding:16px;
+    }
+    p{
+      padding-bottom:16px;
+      padding-left: 16px;
+    }
+}
+.result-circle{
+    text-align:left;
+    margin-top: 44px;
+    margin-left:20px;
+}
+
+.circle{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin:16px;
+    border-radius: 50%;
+    background: #fff;
+}
+.circle:first-child{
+    margin-left: 0px;
+}
+
+
+
+.circle-border{
+}
+
+.result-view-all-button{
+    margin-top: 40px;
+    text-align: left;
+    margin-left: 20px;
+    button{
+        padding:20px 80px;
+    }
+    a{
+       letter-spacing: 4px;
+
+    }
+}
+
+/*=====================================================
+#Price
+=====================================================*/
+.price-inner-section{
+    max-width: 960px;
+    margin:60px auto 0;
+}
+
+
+.price-table {
+    border: 1px solid #707070;
+    border-collapse:collapse;
+    margin-top: 60px;
+}
+
+.price-table tr {
+    padding:16px 20px;
+    border: 1px solid #707070;
+}
+
+.price-table tr th {
+     width:262px;
+     background-color:#3E3E3E;
+     color: #fff;
+     font-size: 24px;
+}
+
+.price-table tr td {
+    width:698px;
+    background-color:#FFFFFF;
+    color: #3E3E3E;
+    font-size: 24px;
+    text-align:left;
+    padding-left: 20px;
+    padding:20px;
+}
+.price-text{
+    text-align:left;
+    margin-top: 12px;
+}
+
+
+/*=====================================================
+#コメント
+=====================================================*/
+.comment{
+    margin-top: 120px;
+}
+.comment-content-items{
+    display: flex;
+    justify-content: center;
+}
+
+.comment-content-items{
+    width:100%;
+}
+
+.comment-left-part{
+    height:604px;
+    h1{
+        text-align: left;
+        padding-top: 120px;
+        padding-left: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.comment-left-part{
+     background-color: #fff;
+}
+.comment-left-part-content{
+    display: flex;
+    height:auto;
+    max-width: 666px;
+    img{
+        height: 100px;
+        padding-left: 60px;
+        padding-right: 32px;
+    }
+    p{
+       padding-right: 60px;
+    }
+}
+.comment-content-item-right-part{
+    margin: 80px 0 ;
+}
+
+
+
+
+/*=====================================================
+#Q&A
+=====================================================*/
+
+/*=====================================================
+#アクセス
+=====================================================*/
+
+/*=====================================================
+#コンタクト
+=====================================================*/
+
+/*=====================================================
+#フッター
+=====================================================*/
+.footer{
+    margin-top: 1100px;
+    height: 292px;
+    background-color: #3E3E3E;
+    color: #FFFFFF;
+}
+
+.footer-component{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-component{
+    margin-left: 10%;
+}
+
+.footer-left-sns{
+    display:flex;
+    justify-content: center;
+    li{
+        padding:16px;
+    }
+}
+.footer-left-text{
+    padding-top: 20px;
+    li{
+        padding-top:20px;
+    }
+}
+
+.footer-right-part{
+    text-align:right;
+    margin-right: 10%;
+    h1{
+        font-size:40px;
+    }
+    p{
+        font-size:12px;
+    }
+}
