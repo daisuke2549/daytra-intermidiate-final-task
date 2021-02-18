@@ -44,17 +44,17 @@ a {
   background-color: transparent;
 }
 
-.inner-section-title h1 {
+.inner-section-title h2 {
   padding-top: 60px;
 }
 
-h1 {
+h2 {
   font-size: 36px;
   font-weight: bold;
 }
 
-h2 {
-  font-size: 32px;
+h1 {
+  font-size: 36px;
 }
 
 h3 {
@@ -220,7 +220,7 @@ h3 {
   height: 400px;
 }
 
-.service-inner-section h1 {
+.service-inner-section h2 {
   color: #FFFFFF;
 }
 
@@ -268,7 +268,7 @@ h3 {
   margin-bottom: 60px;
 }
 
-.result-inner-section h1 {
+.result-inner-section h2 {
   color: #fff;
   text-align: left;
   margin-left: 60px;
@@ -393,11 +393,15 @@ h3 {
   width: 100%;
 }
 
-.comment-left-part {
-  height: 604px;
+.comment-left-part-contents {
+  padding-bottom: 120px;
 }
 
-.comment-left-part h1 {
+.comment-left-part {
+  max-height: 604px;
+}
+
+.comment-left-part h2 {
   text-align: left;
   padding-top: 120px;
   padding-left: 60px;
@@ -413,8 +417,9 @@ h3 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
+  max-height: 100px;
   max-width: 666px;
+  margin-bottom: 72px;
 }
 
 .comment-left-part-content img {
@@ -434,12 +439,247 @@ h3 {
 /*=====================================================
 #Q&A
 =====================================================*/
+.qa {
+  background: url(../img/qa-bg.png) top right 100% no-repeat;
+  background-size: cover;
+}
+
+.qa-inner-section {
+  padding-bottom: 60px;
+}
+
+.qa-accordion-part {
+  margin-top: 60px;
+}
+
+.qa-items {
+  background-color: #fff;
+  max-width: 612px;
+  margin-bottom: 32px;
+  width: 50%;
+  margin-left: auto;
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+.qa-items dt {
+  height: 56px;
+  position: url(../img/logo-mark.png);
+  display: relative;
+}
+
+.qa-item-question {
+  height: 16px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 16px 0 14px;
+  line-height: 1.5;
+}
+
+.qa-item-question:before {
+  background: #4973ff;
+  border-radius: 50%;
+  color: #fff;
+  content: 'Q';
+  display: inline-block;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  -webkit-flex: 0 0 24px;
+          flex: 0 0 24px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.qa-item-question:after {
+  content: '';
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  background: transparent url("../img/plus.png") 0% 0% no-repeat padding-box;
+  background-size: contain;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: 16px;
+}
+
+.qa-item-answer {
+  display: none;
+  margin: 16px;
+  background: #3B69FF33 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  margin-top: 0px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.qa-item-answer p {
+  padding: 16px;
+}
+
+.is-open {
+  display: block;
+}
+
 /*=====================================================
 #アクセス
 =====================================================*/
+.access {
+  text-align: left;
+  color: #fff;
+}
+
+.access-inner {
+  background-color: #3E3E3E;
+  width: 76.5%;
+}
+
+.access-inner {
+  width: auto;
+  height: auto;
+}
+
+.access-inner h2 {
+  padding: 120px 0 60px 100px;
+}
+
+.access-address {
+  padding-left: 100px;
+  line-height: 1.5;
+}
+
+.access-link-box {
+  padding-left: 100px;
+  padding-top: 32px;
+  padding-bottom: 120px;
+}
+
+.access-link-box a {
+  color: #fff;
+  border: 1px solid #FFFFFF;
+  padding: 20px 80px;
+  font-size: 20px;
+}
+
+.access-map {
+  margin-top: -348px;
+  margin-right: auto;
+  margin-right: 40px;
+  text-align: right;
+  width: auto;
+  height: auto;
+}
+
+.access-map iframe {
+  width: 60%;
+}
+
 /*=====================================================
 #コンタクト
 =====================================================*/
+.contact {
+  background: url(../img/contact-bg.png) top right 100% no-repeat;
+  background-size: cover;
+  height: 1122px;
+  margin-top: 120px;
+}
+
+.contact-inner-section {
+  padding-top: 60px;
+  max-width: 960px;
+  margin: auto;
+}
+
+.contact-inner-section-title {
+  color: #fff;
+  background: url(../img/contact1.png) top right 100% no-repeat;
+  background-size: cover;
+}
+
+.contact-inner-section-title h2 {
+  padding-top: 60px;
+}
+
+.contact-inner-section-title p {
+  padding-top: 16px;
+  padding-bottom: 60px;
+}
+
+.contact-form {
+  background-color: #fff;
+  height: 1000px;
+}
+
+.contact-form-part {
+  max-width: 770px;
+  padding-top: 60px;
+  margin: auto;
+}
+
+.contact-form-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 32px;
+}
+
+.contact-form-item p {
+  width: 118px;
+  margin-right: 60px;
+  margin-top: 11px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.contact-form-item select {
+  padding: 11.5px;
+}
+
+.Form-Item-Input {
+  margin: 0 0 0 0px;
+  margin-top: 5px;
+  padding-left: 15px;
+  height: 28px;
+  width: 100%;
+  max-width: 532px;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  border-bottom: 1px solid #cccccc;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-radius: 0px;
+}
+
+.Form-Item-Label-required:after {
+  content: '必須';
+  display: inline-block;
+  background-size: contain;
+  margin-left: 20px;
+  color: #fff;
+  background-color: #FF4646;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.sex-radio-button {
+  margin-top: 10px;
+}
+
+.sex-radio-button input {
+  padding: 0 1110px;
+}
+
 /*=====================================================
 #フッター
 =====================================================*/
@@ -494,7 +734,7 @@ h3 {
   margin-right: 10%;
 }
 
-.footer-right-part h1 {
+.footer-right-part h2 {
   font-size: 40px;
 }
 
