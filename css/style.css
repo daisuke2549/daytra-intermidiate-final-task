@@ -25,6 +25,10 @@ img {
   width: 100%;
 }
 
+img:hover {
+  opacity: 0.6;
+}
+
 .inner {
   max-width: 1220px;
   margin: 0 auto;
@@ -61,6 +65,14 @@ h3 {
   font-size: 20px;
 }
 
+.br-sp {
+  display: none;
+}
+
+nav.globalMenuSp {
+  display: none;
+}
+
 /*=====================================================
 #ヘッダー
 =====================================================*/
@@ -76,7 +88,34 @@ h3 {
 }
 
 .header-navigation nav ul li {
-  padding: 32px 20px;
+  margin: 32px 20px;
+  position: relative;
+}
+
+.header-navigation nav ul li a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  right: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: #9e9c9c;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 2.2s;
+  transition: -webkit-transform 2.2s;
+  transition: transform 2.2s;
+  transition: transform 2.2s, -webkit-transform 2.2s;
+}
+
+.header-navigation nav ul li a:hover:before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  /*ホバー時に等倍へ拡大*/
 }
 
 .header-top-part {
@@ -140,6 +179,37 @@ h3 {
   color: #FFFFFF;
 }
 
+.header-top-title button:hover {
+  opacity: 0.6;
+}
+
+.header-top-part-sp {
+  display: none;
+}
+
+.floating {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.floating a {
+  display: block;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  opacity: 0.6;
+  background-color: transparent;
+}
+
+.floating a:hover {
+  opacity: 1;
+}
+
+.hamburger img {
+  display: none;
+}
+
 /*=====================================================
 #ニュース
 =====================================================*/
@@ -152,6 +222,10 @@ h3 {
 
 .news-text-area-content {
   margin-top: 60px;
+}
+
+.news-text-area-content :hover {
+  background-color: #4973FF1A;
 }
 
 .news-section-text-area {
@@ -184,10 +258,6 @@ h3 {
   border-bottom: 1px solid;
 }
 
-.news-text-area-date {
-  margin-top: 7px;
-}
-
 .news-text-area-date-button {
   font-size: 14px;
   width: 121px;
@@ -210,6 +280,12 @@ h3 {
   letter-spacing: 4px;
   padding: 10px 50px;
   background-color: #fff;
+}
+
+.news-more-button button a:hover {
+  opacity: 0.6;
+  color: #fff;
+  background-color: #3E3E3E;
 }
 
 /*=====================================================
@@ -328,6 +404,10 @@ h3 {
 
 .result-view-all-button a {
   letter-spacing: 4px;
+}
+
+.result-view-all-button button:hover {
+  opacity: 0.6;
 }
 
 /*=====================================================
@@ -570,6 +650,10 @@ h3 {
   font-size: 20px;
 }
 
+.access-link-box :hover {
+  opacity: 0.6;
+}
+
 .access-map {
   margin-top: -348px;
   margin-right: auto;
@@ -589,12 +673,12 @@ h3 {
 .contact {
   background: url(../img/contact-bg.png) top right 100% no-repeat;
   background-size: cover;
-  height: 1122px;
   margin-top: 120px;
 }
 
 .contact-inner-section {
   padding-top: 60px;
+  padding-bottom: 60px;
   max-width: 960px;
   margin: auto;
 }
@@ -603,6 +687,7 @@ h3 {
   color: #fff;
   background: url(../img/contact1.png) top right 100% no-repeat;
   background-size: cover;
+  border-radius: 12px 12px 0px 0px;
 }
 
 .contact-inner-section-title h2 {
@@ -616,7 +701,8 @@ h3 {
 
 .contact-form {
   background-color: #fff;
-  height: 1000px;
+  padding-bottom: 15px;
+  border-radius: 0px 0px 12px 12px;
 }
 
 .contact-form-part {
@@ -672,20 +758,69 @@ h3 {
   border-radius: 2px;
 }
 
-.sex-radio-button {
+.contact-form-item-textarea {
+  display: block;
+  text-align: right;
+  margin: auto;
+}
+
+.contact-inputBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 10px;
 }
 
-.sex-radio-button input {
-  padding: 0 1110px;
+.contact-radio {
+  padding-right: 40px;
+}
+
+.contact-message-title {
+  text-align: left;
+}
+
+textarea {
+  max-width: 700px;
+  height: 200px;
+  width: 100%;
+}
+
+textarea:focus {
+  color: #4973FF;
+}
+
+.contact-privacy {
+  text-align: left;
+  display: block;
+}
+
+.contact-privacy input {
+  width: 17px;
+  height: 13px;
+}
+
+.contact-privacy label {
+  font-size: 18px;
+}
+
+.contact-form-item button {
+  max-width: 173px;
+  background-color: #FFAA3B;
+  color: #fff;
+  border-radius: 10px;
+  padding: 16px 50px;
+}
+
+.contact-form-item button:hover {
+  opacity: 0.6;
 }
 
 /*=====================================================
 #フッター
 =====================================================*/
 .footer {
-  margin-top: 1100px;
-  height: 292px;
+  padding-top: 30px;
   background-color: #3E3E3E;
   color: #FFFFFF;
 }
@@ -723,6 +858,7 @@ h3 {
 
 .footer-left-text {
   padding-top: 20px;
+  padding-bottom: 60px;
 }
 
 .footer-left-text li {
@@ -740,5 +876,140 @@ h3 {
 
 .footer-right-part p {
   font-size: 12px;
+  padding-top: 10px;
+}
+
+/*=====================================================
+#レスポンシブデザイン
+=====================================================*/
+@media screen and (max-width: 768px) {
+  /* 共通部分 */
+  body {
+    font-size: 14px;
+  }
+  .br-lp {
+    display: none;
+  }
+  .br-sp {
+    display: block;
+  }
+  /* ヘッダーレスポンシブ */
+  .header-navigation {
+    display: none;
+  }
+  .header-top-part-sp {
+    display: block;
+    text-align: left;
+  }
+  .header-top-part-sp h2 {
+    font-size: 23px;
+    padding: 20px 16px;
+  }
+  .header-top-title {
+    padding-top: 153px;
+  }
+  .header-top-title h2 {
+    font-size: 24px;
+    text-align: left;
+    padding-left: 16px;
+    line-height: 1.666666667;
+  }
+  .header-top-title button {
+    font-size: 16px;
+    -webkit-box-shadow: 0px 3px 5px #3E3E3E33;
+            box-shadow: 0px 3px 5px #3E3E3E33;
+    border-radius: 4px;
+    max-width: 222px;
+    width: 100%;
+  }
+  /* ハンバーガーメニュ-レスポンシブ */
+  .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    right: 13px;
+    top: 18px;
+    width: 42px;
+    height: 42px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 6px;
+    background: #FF0000;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 5px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 15px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 25px;
+  }
+  .hamburger.active span:nth-child(1) {
+    top: 16px;
+    background: #FF0000;
+    color: #FF0000;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 16px;
+    background: #FF0000;
+    color: #FF0000;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  nav.globalMenuSp {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity .6s ease, visibility .6s ease;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+  nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    -webkit-transition: .4s all;
+    transition: .4s all;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+  }
+  nav.globalMenuSp ul li:hover {
+    background: #ddd;
+  }
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: #fff;
+    padding: 1em 0;
+    text-decoration: none;
+  }
+  /* このクラスを、jQueryで付与・削除する */
+  nav.globalMenuSp.active {
+    opacity: 100;
+  }
 }
 /*# sourceMappingURL=style.css.map */
