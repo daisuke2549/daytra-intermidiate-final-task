@@ -91,7 +91,10 @@ nav.globalMenuSp{
 /*=====================================================
 #ヘッダー
 =====================================================*/
-
+header{
+    background: url(../img/mv.png) top right 100% no-repeat;
+    background-size:  cover;
+}
 
 
 .header-navigation nav ul{
@@ -126,8 +129,7 @@ nav.globalMenuSp{
 .header-top-part{
     height:565px;
 
-    background: url(../img/mv.png) top right 100% no-repeat;
-    background-size:  cover;
+
 }
 .header-top-title{
     padding-top:153px;
@@ -151,7 +153,7 @@ nav.globalMenuSp{
         font-size:18px;
         font-weight: bold;
         background-color:#FFAA3B ;
-        box-shadow: 0px 3px 5px #3E3E3E33;
+        // box-shadow: 0px 3px 5px #3E3E3E33;
         border-radius: 4px;
         width:282px;
         margin-top: 32px;
@@ -207,7 +209,7 @@ nav.globalMenuSp{
 .news-text-area-content{
    margin-top: 60px;
 :hover{
-    background-color: #4973FF1A;
+    // background-color: #4973FF1A;
 }
 }
 
@@ -631,7 +633,7 @@ nav.globalMenuSp{
 .qa-item-answer{
     display: none;
     margin:16px;
-    background: #3B69FF33 0% 0% no-repeat padding-box;
+    // background: #3B69FF33 0% 0% no-repeat padding-box;
     border-radius: 4px;
     margin-top: 0px;
     line-height: 1.5;
@@ -930,6 +932,17 @@ body{
 
 
 /* ヘッダーレスポンシブ */
+header{
+    background:transparent;
+    background-size:  cover;
+    height:667px;
+}
+
+.header-top-part{
+
+    background: url(../img/mv.png) top right 100% no-repeat;
+    background-size:  cover;
+}
 
 .header-navigation{
     display: none;
@@ -956,13 +969,14 @@ body{
 
     button{
         font-size:16px;
-        box-shadow: 0px 3px 5px #3E3E3E33;
+        // box-shadow: 0px 3px 5px #3E3E3E33;
         border-radius: 4px;
         max-width:222px;
         width:100%;
     }
-
 }
+
+
 
 
 /* ハンバーガーメニュ-レスポンシブ */
@@ -986,7 +1000,7 @@ body{
     width   : 30px;
     height  : 2px ;
     left    : 6px;
-    background : #FF0000;
+     padding-top:10px;
     -webkit-transition: 0.3s ease-in-out;
     -moz-transition   : 0.3s ease-in-out;
     transition        : 0.3s ease-in-out;
@@ -1039,21 +1053,139 @@ body{
 
   }
 
+/* ニュースレスポンシブ */
+.news{
+    margin-top: 00px;
+}
+
+.news-inner-section{
+    margin:0 4px;
+    margin-top: -80px;
+    height:auto;
+    margin-bottom: 60px;
+}
+
+.news-section-text-area{
+    margin: 0;
+    border-top: 1px solid ;
+    margin-top: 0px;
+    display: block;
+
+    p{
+        text-align: left;
+        padding-top:16px;
+        padding-left: 16px;
+        padding-bottom: 12px;
+        padding-right: 8px;
+    }
+
+    img{
+        width: 43px;
+        height: 46px;
+    }
+
+}
+
+.news-section-text-area:nth-child(3){
+    border-bottom: 1px solid ;
+}
 
 
 
 
+.news-text-area{
+    font-size:14px;
+    max-width: 272px;
+}
+
+.news-more-button{
+    padding-bottom: 60px;
+  a{
+    border:1px solid;
+    letter-spacing: 4px;
+    padding:16px 100px;
+    background-color: #fff;
+   }
+   button a:hover{
+     opacity:0.6;
+     color:#fff;
+     background-color: #3E3E3E;
+   }
+}
+
+
+/* サービスレスポンシブ */
+.service{
+    height: auto;
+    background: linear-gradient(180deg,#3E3E3E 0%,#3E3E3E 480px,#F3F3F3 100px,#F3F3F3 100%);
+}
+.service-inner-section{
+     padding-bottom: 60px;
+}
+
+.service-content-items{
+    display:block;
+    padding-bottom:40px;
+
+}
+.service-content-item{
+    padding-top:40px ;
+    margin: 36px auto 36px;
+    max-width: 100%;
+    img{
+        width: 64px;
+        height: 64px;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 23.62px;
+    }
+    p{
+        font-size: 14px;
+        padding-top: 20px;
+        padding:20px 16px 0px 16px;
+    }
+}
 
 
 
+/* resultレスポンシブ */
+.result{
+    margin-top: auto;
+    height:auto;
+}
+.result-content-items{
+    margin-top: 60px;
 
+}
 
+.result-circle{
+    text-align:center;
+    margin-top: 44px;
+}
 
-
-
-
-
-
+.result-view-all-button{
+    margin-top: 10px;
+    text-align: center;
+    margin: 0 auto;
+    button{
+        padding:16px 100px;
+    }
+    a{
+       letter-spacing: 4px;
+    }
+    button:hover{
+        opacity:0.6;
+    }
+}
+.result-inner-section{
+    height: auto;
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+}
 
 
 }
+
+
