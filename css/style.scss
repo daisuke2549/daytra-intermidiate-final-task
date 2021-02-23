@@ -127,7 +127,7 @@ header{
 }
 
 .header-top-part{
-    height:565px;
+    height:auto;
 
 
 }
@@ -202,7 +202,7 @@ header{
 .news-inner-section{
     margin: 120px 0;
     max-width: 1200px;
-    height: 659px;
+    height: auto;
     background-color: #fff;
 
 }
@@ -281,7 +281,7 @@ header{
 =====================================================*/
 .service{
     background-color:#3E3E3E;
-    height: 400px;
+    height: auto;
 }
 .service-inner-section{
     h2{
@@ -1157,7 +1157,6 @@ header{
 }
 .result-content-items{
     margin-top: 60px;
-
 }
 
 .result-circle{
@@ -1182,10 +1181,63 @@ header{
 .result-inner-section{
     height: auto;
     padding-bottom: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
 }
 
 
+/* priceレスポンシブ */
+
+
+
+
+
+
+
+
+/* footerレスポンシブ */
+
+
+.footer-component{
+    padding-top: 40px;
+    display: block;
+    margin-left: 0px;
+}
+
+.footer-left-sns{
+    display:flex;
+    justify-content: center;
+    li{
+        padding:0px;
+    }
+    li:first-child{
+        padding-right: 50px;
+    }
+}
+.footer-left-text{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    li{
+        padding-top:26px;
+    }
+}
+
+.footer-right-part{
+    text-align:center;
+    margin-right: 0%;
+    padding-bottom: 57px;
+    h2{
+        font-size:32px;
+        margin-top: -10px;
+    }
+    p{
+        font-size:12px;
+        padding-top: 10px;
+    }
 }
 
 
+
+
+
+
+}
